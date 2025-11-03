@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>x402 LLM Cloud Agent </title>
+    <title>x402 Cloud Intelligence Agent </title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -10,7 +10,7 @@
         <!-- Header Section -->
         <div class="header">
             <div class="header-info">
-                <span class="title">x402 LLM Cloud Agent </span>
+                <span class="title">x402 Cloud Intelligence Agent </span>
                 <span class="status">CPU: x86_64 | MEMORY: 16 KB</span>
             </div>
             <div class="window-controls">
@@ -24,7 +24,7 @@
         <div class="main">
             <!-- Home Section -->
             <section id="home" class="section">
-                <h1>Welcome to our journey with x402 LLM Cloud Agent </h1>
+                <h1>Welcome to our journey with x402 Cloud Intelligence Agent </h1>
                 <p>A tribute to low-level programming mastery. Explore how we deployed a token entirely in raw assembly language.</p>
             </section>
 
@@ -250,14 +250,14 @@
 
                 <!-- Step 2: Extracting and Setting Up -->
                 <h3>Step 2: Extracting and Setting Up</h3>
-                <p>We extracted the downloaded files into our <x402 LLM Cloud Agent >Documents</x402 LLM Cloud Agent > folder and ensured the paths were set correctly in our environment variables.</p>
+                <p>We extracted the downloaded files into our <x402 Cloud Intelligence Agent >Documents</x402 Cloud Intelligence Agent > folder and ensured the paths were set correctly in our environment variables.</p>
                 <img src="images/path-to-extraction-screenshot.png" alt="Extracting Files Screenshot" class="screenshot">
 
-                <!-- Step 3: Writing the x402 LLM Cloud Agent  -->
-                <h3>Step 3: Writing the x402 LLM Cloud Agent </h3>
-                <p>Below is the C x402 LLM Cloud Agent  we used to generate the wallet:</p>
-                <div class="x402 LLM Cloud Agent -block">
-                    <pre class="x402 LLM Cloud Agent -snippet">#include <sodium.h>
+                <!-- Step 3: Writing the x402 Cloud Intelligence Agent  -->
+                <h3>Step 3: Writing the x402 Cloud Intelligence Agent </h3>
+                <p>Below is the C x402 Cloud Intelligence Agent  we used to generate the wallet:</p>
+                <div class="x402 Cloud Intelligence Agent -block">
+                    <pre class="x402 Cloud Intelligence Agent -snippet">#include <sodium.h>
 #include <stdio.h>
 
 int main() {
@@ -288,13 +288,13 @@ int main() {
                     </stdio.h></sodium.h></pre>
                 </div>
 
-                <!-- Step 4: Compiling the x402 LLM Cloud Agent  -->
-                <h3>Step 4: Compiling the x402 LLM Cloud Agent </h3>
+                <!-- Step 4: Compiling the x402 Cloud Intelligence Agent  -->
+                <h3>Step 4: Compiling the x402 Cloud Intelligence Agent </h3>
                 <p>Use the following command to compile the program:</p>
-                <x402 LLM Cloud Agent >
+                <x402 Cloud Intelligence Agent >
 gcc -o generate_wallet generate_wallet.c -IC:\Users\User\Documents\libsodium\libsodium-win64\include -LC:\Users\User\Documents\libsodium\libsodium-win64\lib -lsodium
-                </x402 LLM Cloud Agent >
-                <img src="images/path-to-compilation-screenshot.png" alt="Compiling x402 LLM Cloud Agent  Screenshot" class="screenshot">
+                </x402 Cloud Intelligence Agent >
+                <img src="images/path-to-compilation-screenshot.png" alt="Compiling x402 Cloud Intelligence Agent  Screenshot" class="screenshot">
 
                 <!-- Step 5: Running the Program -->
                 <h3>Step 5: Running the Program</h3>
@@ -305,8 +305,8 @@ gcc -o generate_wallet generate_wallet.c -IC:\Users\User\Documents\libsodium\lib
                 <h3>Generating and Uploading Token Metadata</h3>
                 <p>We wrote an assembly program to upload token metadata to a server and display the token metadata on the console. This program makes use of system calls to perform network communication and console output directly from the x86_64 architecture.</p>
 
-                <div class="x402 LLM Cloud Agent -block">
-                    <pre class="x402 LLM Cloud Agent -snippet">section .data
+                <div class="x402 Cloud Intelligence Agent -block">
+                    <pre class="x402 Cloud Intelligence Agent -snippet">section .data
     api_url db "https://pump.fun/api/ipfs", 0
     metadata_json db "{\"name\":\"MyToken\",\"symbol\":\"MTK\",\"description\":\"My custom token\",\"twitter\":\"https://twitter.com/MyToken\",\"telegram\":\"https://t.me/MyTokenGroup\",\"website\":\"https://mytoken.io\"}", 0
     image_path db "example.png", 0
@@ -362,7 +362,7 @@ _start:
 
     ; Exit program
     mov rax, 60   ; Exit system call
-    xor rdi, rdi  ; Exit x402 LLM Cloud Agent  0
+    xor rdi, rdi  ; Exit x402 Cloud Intelligence Agent  0
     syscall
                     </pre>
                 </div>
@@ -371,8 +371,8 @@ _start:
                 <h3>Step 6: Sending Transaction Details to PumpPortal.fun</h3>
                 <p>After generating the metadata URI, our next step was to send the transaction details to the PumpPortal.fun API. This step generates an unsigned transaction, which will be signed locally in the next step.</p>
 
-                <div class="x402 LLM Cloud Agent -block">
-                    <pre class="x402 LLM Cloud Agent -snippet">section .data
+                <div class="x402 Cloud Intelligence Agent -block">
+                    <pre class="x402 Cloud Intelligence Agent -snippet">section .data
     api_url db "https://pumpportal.fun/api/trade-local", 0
     json_body db "{\"publicKey\":\"<dev_wallet_address>\",\"action\":\"create\",\"tokenMetadata\":{\"name\":\"ExampleToken\",\"symbol\":\"EXMPL\",\"uri\":\"<metadata_uri>\"},\"mint\":\"<mint_address>\",\"denominatedInSol\":\"true\",\"amount\":\"0.100\",\"slippage\":10,\"priorityFee\":\"0.00010\",\"pool\":\"pump\"}", 0
     user_agent db "User-Agent: AssemblyTechClient/1.0", 0
@@ -451,8 +451,8 @@ _start:
 
 <h4>C Script: signer.c</h4>
 <p>The C script dynamically loads a Rust DLL for signing and forwards the signed transaction to the Helius RPC.</p>
-<div class="x402 LLM Cloud Agent -block">
-<pre class="x402 LLM Cloud Agent -snippet">#include <stdio.h>
+<div class="x402 Cloud Intelligence Agent -block">
+<pre class="x402 Cloud Intelligence Agent -snippet">#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <curl curl.h="">
@@ -474,15 +474,15 @@ int main() {
 
 <h4>Rust Script: lib.rs</h4>
 <p>The Rust script provides the necessary cryptographic functions for signing transactions.</p>
-<div class="x402 LLM Cloud Agent -block">
-<pre class="x402 LLM Cloud Agent -snippet">use solana_sdk::{
+<div class="x402 Cloud Intelligence Agent -block">
+<pre class="x402 Cloud Intelligence Agent -snippet">use solana_sdk::{
     signature::{Keypair, Signer},
     transaction::VersionedTransaction,
     message::VersionedMessage,
 };
 use std::ffi::{CStr, CString};
 use bs58;
-use binx402 LLM Cloud Agent ;
+use binx402 Cloud Intelligence Agent ;
 
 #[no_mangle]
 pub extern "C" fn sign_transaction(
@@ -500,20 +500,20 @@ pub extern "C" fn sign_transaction(
 <p>Before using the `signer.c` script, you need to compile the Rust project to generate the necessary DLL file:</p>
 <ul>
     <li>Navigate to the Rust project's root directory and build it into a DLL:
-        <x402 LLM Cloud Agent >
+        <x402 Cloud Intelligence Agent >
         cargo build --release --target x86_64-pc-windows-gnu
-        </x402 LLM Cloud Agent >
+        </x402 Cloud Intelligence Agent >
     </li>
-    <li>Copy the generated DLL file (<x402 LLM Cloud Agent >solana_sdk_wrapper.dll</x402 LLM Cloud Agent >) from the <x402 LLM Cloud Agent >target/release</x402 LLM Cloud Agent > directory to the same directory as your `signer.c` executable.</li>
+    <li>Copy the generated DLL file (<x402 Cloud Intelligence Agent >solana_sdk_wrapper.dll</x402 Cloud Intelligence Agent >) from the <x402 Cloud Intelligence Agent >target/release</x402 Cloud Intelligence Agent > directory to the same directory as your `signer.c` executable.</li>
     <li>Compile the `signer.c` script with the following command:
-        <x402 LLM Cloud Agent >
+        <x402 Cloud Intelligence Agent >
         gcc -o signer signer.c -L. -lsolana_sdk_wrapper
-        </x402 LLM Cloud Agent >
+        </x402 Cloud Intelligence Agent >
     </li>
 </ul>
 
 <p>After signing, the transaction will be ready for submission to the blockchain. The signed transaction in Base58 format will look something like this:</p>
-<x402 LLM Cloud Agent >3B98p3...SignedTransactionEnx402 LLM Cloud Agent d</x402 LLM Cloud Agent >
+<x402 Cloud Intelligence Agent >3B98p3...SignedTransactionEnx402 Cloud Intelligence Agent d</x402 Cloud Intelligence Agent >
 <p>Save the signed transaction for the next step: submitting it to the blockchain.</p>
 
 <!-- Step 8: Submitting the Transaction to Jito API -->
@@ -526,10 +526,10 @@ pub extern "C" fn sign_transaction(
     <li><strong>Transaction Hash:</strong> The response from the Jito API includes a transaction hash, which can be used to track the transaction on Solscan.</li>
 </ul>
 
-<div class="x402 LLM Cloud Agent -block">
-    <pre class="x402 LLM Cloud Agent -snippet">section .data
+<div class="x402 Cloud Intelligence Agent -block">
+    <pre class="x402 Cloud Intelligence Agent -snippet">section .data
     jito_api_url db "https://mainnet.block-engine.jito.wtf/api/v1/bundles", 0
-    signed_txn db "base58_enx402 LLM Cloud Agent d_signed_transaction", 0
+    signed_txn db "base58_enx402 Cloud Intelligence Agent d_signed_transaction", 0
     json_body_template db "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"sendBundle\",\"params\":[[\"", 0
     json_body_end db "\"]]}", 0
     complete_json_body times 1024 db 0
@@ -593,13 +593,13 @@ _start:
 </div>
 
 <p>After submission, the Jito API returns a transaction hash. Use this hash to track the transaction on <a href="https://solscan.io" target="_blank">Solscan</a>. For example:</p>
-<x402 LLM Cloud Agent >https://solscan.io/tx/<transaction_hash>?cluster=mainnet-beta</transaction_hash></x402 LLM Cloud Agent >
+<x402 Cloud Intelligence Agent >https://solscan.io/tx/<transaction_hash>?cluster=mainnet-beta</transaction_hash></x402 Cloud Intelligence Agent >
 <p>With this, our transaction lifecycle was complete, and our token was successfully deployed on the Solana blockchain!</p>
 </section>
 
 <!-- Footer -->
 <footer>
-    <p>© 2024 x402 LLM Cloud Agent ToCoin. Built from bare metal.</p>
+    <p>© 2024 x402 Cloud Intelligence Agent ToCoin. Built from bare metal.</p>
 </footer>
 </div>
 <script src="js/script.js"></script>
